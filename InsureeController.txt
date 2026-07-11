@@ -1,3 +1,9 @@
+public ActionResult Admin()
+{
+    var insurees = db.Insurees.ToList();
+    return View(insurees);
+}
+
 [HttpPost]
 [ValidateAntiForgeryToken]
 public ActionResult Create(Insuree insuree)
