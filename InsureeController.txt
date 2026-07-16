@@ -77,6 +77,11 @@ public ActionResult Create(Insuree insuree)
         db.SaveChanges();
 
         return RedirectToAction("Index");
+public ActionResult Admin()
+{
+    var insurees = db.Insurees.ToList();
+    return View(insurees);
+}
     }
 
     return View(insuree);
